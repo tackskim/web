@@ -1,0 +1,13 @@
+--------------------------------------------------------
+--  파일이 생성됨 - 화요일-8월-27-2019   
+--------------------------------------------------------
+@C:\Users\User\dragon.xlsx\TABLES.sql
+--@C:\Users\User\dragon.xlsx\ADLOGIN_DATA_TABLE.xlsx
+--@C:\Users\User\dragon.xlsx\BROAD_DATA_TABLE.xlsx
+--@C:\Users\User\dragon.xlsx\CAREER_DATA_TABLE.xlsx
+--@C:\Users\User\dragon.xlsx\CRUNEW_DATA_TABLE.xlsx
+--@C:\Users\User\dragon.xlsx\ENDS_DATA_TABLE.xlsx
+--@C:\Users\User\dragon.xlsx\INTERN_DATA_TABLE.xlsx
+--@C:\Users\User\dragon.xlsx\RELEASES_DATA_TABLE.xlsx
+--@C:\Users\User\dragon.xlsx\USLOGIN_DATA_TABLE.xlsx
+--@C:\Users\User\dragon.xlsx\VIEWCOMMENT_DATA_TABLE.xlsx

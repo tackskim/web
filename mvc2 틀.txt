@@ -1,0 +1,12 @@
+Control 패키지
+-Controler.java (자바에서 클래스 불러와서 결과를 view에다가 뿌려주는 클래스)
+
+db 패키지
+-ConnectionManager.java (db 데이터 관리 클래스)
+-DragonBean.java (DB 테이블 내용 get(), set() 클래스)
+
+Action 패키지
+-EditDAO (관리자 모드에서 편집 기능 실제 동작하는 클래스)
+
+추기해야될 자바 파일
+글 추가, 글 삭제, 글 목록 보기, 글 내용 보기, 글 수정, 수정 처리 action 클래스, 로그인 정보 관리 클래스

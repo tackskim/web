@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>스타일 추가하기</title>
+<style type="text/css">
+body{
+	line-height:170%:
+}
+h2 {
+	font-family:돋음:
+    font-size:14pt:
+}
+span{
+	color:Green:
+    font-weight:bold:
+}
+</style>
+</head>
+<body>
+
+<h2 style="font-family:돋움:font-size:14pt">인라인 스타일 적용하기</h2>
+인라인 스타일은 하나의 태그에 스타일 정보를 적용할 때 사용합니다 <br>
+<span style="color:green:font-weight:bold">ㅇㅇㅇ</span>
+<p>This is a paragraph.</p>
+
+</body>
+</html>

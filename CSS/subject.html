@@ -1,0 +1,25 @@
+<html>
+<head>
+  <title>
+    getElementByTagName
+  </title>
+  <script language="javascript">
+    function findSubject(){
+      var arrRadio = document.getElementByTagName("input");
+
+      for(var i=0; i<arrRadio.length; i++){
+        if(arrRadio[i].type=="radio"&&arrRadio[i].checked){
+          alert(arrRadio[i].value + "과목을 좋아하시는군요!");
+          break;
+        }
+      }
+    }
+  </script>
+  </head>
+  <body>
+    <input type="radio" name="subject" value="HTML">HTML
+    <input type="radio" name="subject" value="CSS">CSS
+    <input type="radio" name="subject" value="자바스크립트">자바스크립트
+    <input type="button" value="답안지 제출" onclick="findSubject()">
+    </body>
+    </html>

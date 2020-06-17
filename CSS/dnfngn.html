@@ -1,0 +1,21 @@
+<html>
+<head>
+<title>window.setInerval 메소드</title>
+<script language="javascript">
+  var a = 0;
+  var timer = 0;
+
+  timer = setInterval(sayHello,500);
+
+  function sayHello(){
+    alert("안녕하세요? 자바스크립트입니다.");
+    a++;
+    if(a==5){
+      clearInterval(timer);
+    }
+  }
+  </script>
+</head>
+<body>
+</body>
+</html>

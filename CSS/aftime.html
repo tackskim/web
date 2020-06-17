@@ -1,0 +1,31 @@
+<html>
+ <head>
+   <style type="text/css">
+    .clock {
+     font-family:tahoma;
+     font-size:24pt;
+     color:#006699;
+    }
+  </style>
+  <script language="javascript">
+    var count = 0;
+
+    function showClock() {
+             addCount();
+             setInterval(addCount, 1000);
+    }
+
+    function addCount() {
+        var msg = "이 페이제 접속 후 " + count + "초가 지났습니다.";
+        count++;
+
+        var divClock = document.getElementById("divClock");
+        divClock.innerText = msg;
+    }
+  </script>
+</head>
+<body onload="showClock()">
+ <div id="divClock" class="clock">
+ </div>
+</body>
+</html>

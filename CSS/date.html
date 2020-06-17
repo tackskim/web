@@ -1,0 +1,30 @@
+<html>
+ <head>
+  <title>HTML 문서에 시계 표시하기</title>
+  <style type="text/css">
+   .clock {
+    font-family:tahoma;
+    font-size:24pt;
+    color:#006699;
+   }
+  </style>
+  <script language="javascript">
+   function showClock() {
+    var currentDate = new Date();
+    var divClock = document.getElementById("divClock");
+
+    var msg = "현재 시간: " + currentDate.getHours() + "시 "
+    msg += currentDate.getMinutes() + "분 ";
+    msg += currentDate.getSeconds() + "초";
+
+    divClock.innerText = msg;
+
+    setTimeout(showClock, 1000);
+   }
+  </script>
+ </head>
+ <body onload="showClock()">
+  <div id="divClock" class="clock">
+  </div>
+ </body>
+</html>

@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>간단한 자바 스크립트</title>
+<script language="javascript">
+  var firstName = "도현";
+  var arrNumber = new Array();
+
+  arrNumber[0] =1;
+  arrNumber[1] =2;
+  arrNumber[2] =3;
+  arrNumber[3] =4;
+  arrNumber[4] =5;
+  document.write(arrNumber[1]);
+
+  try{
+    document.write("내 이름은 "+lastName+" 입니다.");
+  } catch(ex){
+    document.write(ex.message);
+  }
+
+  function sayHello(){
+    document.write("안녕하세요? 자바스크립트 함수입니다");
+  }
+
+  sayHello();
+    function add(num1,num2){
+      document.write(num1+"+"+num2+" = "+(num1+num2)+" 입니다.");
+    }
+  add(1,2);
+
+  var result=1+3;
+  document.write("1+3="+result+" 입니다.");
+
+  alert("어서오세요");
+
+  var userinput = prompt("당신의 이름은 무엇인가요?","");
+  alert(userinput+" 님 환영합니다.");
+
+  var result = confirm("2019년에 이루고자 하는 것들을 이루셨나요?");
+  if(result){
+    alert("수고하셨어요! 2020년에도 화이팅");
+  }
+  else{
+    alert("저런 2020년에는 꼭 모두 이루세요~");
+  }
+
+  window.open("http://www.netmarble.net","popup1"
+              , "left=0,top=0,width=300,height=150,location=yes,status=no");
+
+  setTimeout(sayHello, 3000);
+
+  function sayHello(){
+    alert("안녕하세요? setTimeout 메서드가 실행해 준 함수 입니다.");
+  }
+
+
+</script>
+  </head>
+  <body>
+  </body>
+  </html>

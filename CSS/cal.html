@@ -1,0 +1,201 @@
+<html>
+<head>
+<title>계산기</title>
+<script type="text/javascript" src="cal.js">
+</script>
+</head>
+<body>
+  <center>
+  <table border="0" cellpadding="4" cellspacing="0">
+    <tr>
+    <td>
+    <input type="text" value="0" id="textfield" style="text-align:right; width:700px; height:50px;">
+    </td>
+    </tr>
+    <tr>
+    <td>
+      <center>
+    <button type="button" value="clear" onclick="reset()" style="width:300px; height:70px;">
+    <span style="color:blue">
+      <h1>
+      Clear
+      </h1>
+      </span>
+      </button>
+      <button type="button" value="=" onclick="result()" style="width:300px; height:70px;">
+      <span style="color:blue">
+        <h1>
+        =
+        </h1>
+        </span>
+        </button>
+        </center>
+      </td>
+      </tr>
+      <tr>
+        <td>
+        <button type="button" value="1" onclick="calculator('1')" style="width:100px; height:80px;">
+        <span style="color:blue">
+          <h1>
+          1
+          </h1>
+          </span>
+          </button>
+          <button type="button" value="2" onclick="calculator('2')" style="width:100px; height:80px;">
+          <span style="color:blue">
+            <h1>
+            2
+            </h1>
+            </span>
+            </button>
+            <button type="button" value="3" onclick="calculator('3')" style="width:100px; height:80px;">
+            <span style="color:blue">
+              <h1>
+              3
+              </h1>
+              </span>
+              </button>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+              <button type="button" value="+" onclick="calculator('+')" style="width:100px; height:80px;">
+              <span style="color:blue">
+                <h1>
+                +
+                </h1>
+                </span>
+                </button>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <button type="button" value="**" onclick="calculator('**')" style="width:100px; height:80px;">
+                <span style="color:blue">
+                  <h1>
+                  x^y
+                  </h1>
+                  </span>
+                  </button>
+        </td>
+    </tr>
+    <tr>
+      <td>
+        <button type="button" value="4" onclick="calculator('4')" style="width:100px; height:80px;">
+        <span style="color:blue">
+          <h1>
+          4
+          </h1>
+          </span>
+          </button>
+          <button type="button" value="5" onclick="calculator('5')" style="width:100px; height:80px;">
+          <span style="color:blue">
+            <h1>
+            5
+            </h1>
+            </span>
+            </button>
+            <button type="button" value="6" onclick="calculator('6')" style="width:100px; height:80px;">
+            <span style="color:blue">
+              <h1>
+              6
+              </h1>
+              </span>
+              </button>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+              <button type="button" value="-" onclick="calculator('-')" style="width:100px; height:80px;">
+              <span style="color:blue">
+                <h1>
+                -
+                </h1>
+                </span>
+                </button>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <button type="button" value="sin" onclick="calculator('sin')" style="width:100px; height:80px;">
+                <span style="color:blue">
+                  <h1>
+                  sin
+                  </h1>
+                  </span>
+                  </button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button type="button" value="7" onclick="calculator('7')" style="width:100px; height:80px;">
+          <span style="color:blue">
+            <h1>
+            7
+            </h1>
+            </span>
+            </button>
+            <button type="button" value="8" onclick="calculator('8')" style="width:100px; height:80px;">
+            <span style="color:blue">
+              <h1>
+              8
+              </h1>
+              </span>
+              </button>
+              <button type="button" value="9" onclick="calculator('9')" style="width:100px; height:80px;">
+              <span style="color:blue">
+                <h1>
+                9
+                </h1>
+                </span>
+                </button>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <button type="button" value="*" onclick="calculator('*')" style="width:100px; height:80px;">
+                <span style="color:blue">
+                  <h1>
+                  *
+                  </h1>
+                  </span>
+                  </button>
+                  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                  <button type="button" value="cos" onclick="calculator('cos')" style="width:100px; height:80px;">
+                  <span style="color:blue">
+                    <h1>
+                    cos
+                    </h1>
+                    </span>
+                    </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button type="button" value="0" onclick="calculator('0')" style="width:100px; height:80px;">
+            <span style="color:blue">
+              <h1>
+              0
+              </h1>
+              </span>
+              </button>
+              <button type="button" value="+/-" onclick="calculator('trans')" style="width:100px; height:80px;">
+              <span style="color:blue">
+                <h1>
+                +/-
+                </h1>
+                </span>
+                </button>
+                <button type="button" value="." onclick="calculator('.')" style="width:100px; height:80px;">
+                <span style="color:blue">
+                  <h1>
+                  .
+                  </h1>
+                  </span>
+                  </button>
+                  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                  <button type="button" value="/" onclick="calculator('/')" style="width:100px; height:80px;">
+                  <span style="color:blue">
+                    <h1>
+                    /
+                    </h1>
+                    </span>
+                    </button>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                    <button type="button" value="tan" onclick="calculator('tan')" style="width:100px; height:80px;">
+                    <span style="color:blue">
+                      <h1>
+                      tan
+                      </h1>
+                      </span>
+                      </button>
+            </td>
+          </tr>
+  </center>
+</body>
+</html>

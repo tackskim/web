@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<script language="javascript">
+   function validate() {
+       var re = /^[a-zA-Z0-9]{4,12}$/ // 아이디와 패스워드가 적합한지 검사할 정규식
+       var re2 = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]$/i;
+       // 이메일이 적합한지 검사할 정규식
+
+       var id = document.getElementById("id");
+       var pw = document.getElementById("pw");
+       var email = document.getElementById("email");
+       var name = document.getElementById("name");
+       var num1 = document.getElementById("jumin");
+
+       var arrNum1 = new Array(); // 주민번호 앞자리숫자 6개를 담을 배열
+       var arrNum2 = new Array(); // 주민번호 뒷자리숫자 7개를 담을 배열
+
+       // ------------ 이메일 까지 -----------
+
+       if(!check(re,id,"아이디는 4~12자의 영문 대소문자와 숫자로만 입력")) {
+           return false;
+       }
+
+       if(!check(re,pw,"패스워드는 4~12자의 영문 대소문자와 숫자로만 입력")) {
+           return false;
+       }
+
+       if(pw.value != checkpw.value) {
+           alert("비밀번호가 다릅니다. 다시 확인해 주세요.");
+           checkpw.value = "";
+           checkpw.focus();
+           return false;
+       }
+
+       if(email.value == "") {
+           alert("이메일을 입력해 주세요");
+           email.focus();
+           return false;
+       }
+
+       if(!check(re2, email, "적합하지 않은 이메일 형식입니다.")) {
+           return false;
+       }
+
+       if(name.value=="") {
+           alert("이름을 입력해 주세요");
+           name.focus();
+           return false;
+       }
+
+       // -------------- 주민번호 -------------
+
+       for (var i=0; i<num1.value.length; i++) {
+           arrNum1[i] = num1.value.charAt(i);
+       } // 주민번호를 배열에 순서대로 담는다.
+       var tempSum=0;
+
+       for (var i=0; i<num1.value.length-7; i++) {
+           tempSum += arrNum1[i] * (2+i);
+       } // 주민번호 검사방법을 적용하여 앞 번호를 모두 계산하여 더함
+
+       for (var i=6; i<num1.value.length-1; i++) {
+           if(i>=8) {
+               tempSum += arrNum1[i] * (i-6);
+           }
+           else {
+               tempSum += arrNum1[i] * (8+i-6);
+           }
+       } // 같은방식으로 앞 번호 계산한것의 합에 뒷번호 계산한것을 모두 더함
+
+       if((11-(tempSum%11))%10!=arrNum1[12]) {
+           alert("올바른 주민번호가 아닙니다.");
+           num1.value = "";
+           num1.focus();
+           return false;
+       }else{
+     	// ------------ 생일 자동 등록 -----------
+           if(arrNum1[6]==1 || arrNum1[6]==2) {
+               var y = parseInt(num1.value.substring(0,2));
+               var m = parseInt(num1.value.substring(2,4));
+               var d = parseInt(num1.value.substring(4,6));
+               years.value = 1900 + y;
+               month.value = m;
+               day.value = d;
+           }
+           else if(arrNum1[6]==3 || arrNum1[6]==4) {
+               var y = parseInt(num1.value.substring(0,2));
+               var m = parseInt(num1.value.substring(2,4));
+               var d = parseInt(num1.value.substring(4,6));
+               years.value == 2000 + y;
+               month.value = m;
+               day.value = d;
+           }
+       }
+
+       // 관심분야, 자기소개 미입력시 하라는 메시지 출력
+    //   if(chk_info[0].checked==false &&
+    //       chk_info[1].checked==false &&
+    //       chk_info[2].checked==false &&
+    //       chk_info[3].checked==false &&
+    //       chk_info[4].checked==false) {
+    //       alert("관심분야를 골라주세요");
+    //       return false;
+    //   }
+
+    //   if(myst.value=="") {
+    //       alert("자기소개를 적어주세요");
+    //       myst.focus();
+    //       return false;
+    //     }
+      location.href='mailto:someone@example.com?Subject=Hello%20again';
+
+   }
+
+   function check(re, what, message) {
+       if(re.test(what.value)) {
+           return true;
+       }
+       alert(message);
+       what.value = "";
+       what.focus();
+       //return false;
+   }
+</script>
+</head>
+<body>
+<form>
+<table width="650" height="400" border="1"<table style="margin-left: auto; margin-right: auto;">
+
+					<tr bgcolor="yellow"><!-- 첫번째 줄 시작-->
+					<center><td colspan = "2" background="sss.jpg"><center>회원 기본정						보</center></td></center>
+					</tr><!-- 첫번째 줄 끝-->
+					<tr><!-- 두번째 줄 시작-->
+					<td>아이디:</td>
+					<td>
+                    <input type="text" style="width:170px"id="id" name="id" maxlength="12" />
+                    4~12자의 영문 대소문자와 숫자로만 입력
+                    </td>
+					</tr><!-- 두번째 줄 끝-->
+					<tr><!-- 세번째 줄 시작-->
+					<td>비밀번호:</td>
+					<td>
+                    <input type="password"  style="width:170px"id="pw" maxlength="12"/>
+                    4~12자의 영문 대소문자와 숫자로만 입력
+                    </td>
+					</tr><!-- 세번째 줄 끝-->
+					<tr><!-- 네번째 줄 시작-->
+					<td>비밀번호 확인:</td>
+					<td>
+                    <input type="password" style="width:170px" id="checkpw" maxlength="12"/>
+                    </td>
+					</tr><!-- 네번째 줄 끝-->
+					<tr><!-- 다섯번째 줄 시작-->
+					<td>메일주소:</td>
+					<td>
+                    <input type="text" style="width:170px" id="email" />
+                    예) id@domain.com
+                    </td>
+					</tr><!-- 다섯번째 줄 끝-->
+          <tr>
+            <td>
+              이름
+            </td>
+            <td>
+                <input type="text" style="width:170px" id="name" name="name"/>
+            </td>
+          </tr>
+					<tr><!-- 여섯번째 줄 시작-->
+					<td colspan = "2" bgcolor="yellow"><center>개인 신상 정보</center>					</td>
+					</tr><!---여섯번째 줄 끝-->
+					<tr><!-- 일곱번째 줄 시작-->
+					<td>주민등록번호:</td>
+					<td>
+                    <input type="text" name="num1" id="jumin" size="10" maxlength="13">
+                    예) 1234561234567
+                    </td>
+					</tr><!-- 일곱번째 줄 끝-->
+					<tr><!-- 여덟번째 줄 시작-->
+					<td>생일:</td>
+					<td>
+                    <input type="text" style="width:80px" id="years" readonly/>
+                    년
+                    <select name="월" id ="month">
+					<option value ="1">1</option>
+					<option value ="2">2</option>
+					<option value="3">3</option>
+                    <option value ="4">4</option>
+					<option value ="5">5</option>
+					<option value="6">6</option>
+                    <option value ="7">7</option>
+					<option value ="8">8</option>
+					<option value="9">9</option>
+                    <option value ="10">10</option>
+					<option value ="11">11</option>
+					<option value="12">12</option>
+                    </select>
+                    월
+                    <select name="일" id="day">
+					<option value ="1">1</option>
+					<option value ="2">2</option>
+					<option value ="3">3</option>
+                    <option value ="4">4</option>
+					<option value ="5">5</option>
+					<option value ="6">6</option>
+                    <option value ="7">7</option>
+					<option value ="8">8</option>
+					<option value ="9">9</option>
+                    <option value ="10">10</option>
+					<option value ="11">11</option>
+					<option value ="12">12</option>
+                    <option value ="13">13</option>
+					<option value ="14">14</option>
+					<option value ="15">15</option>
+                    <option value ="16">16</option>
+					<option value ="17">17</option>
+					<option value ="18">18</option>
+                    <option value ="19">19</option>
+					<option value ="20">20</option>
+					<option value ="21">21</option>
+                    <option value ="22">22</option>
+					<option value ="23">23</option>
+					<option value ="24">24</option>
+                    <option value ="25">25</option>
+					<option value ="26">26</option>
+					<option value ="27">27</option>
+                    <option value ="28">28</option>
+					<option value ="29">29</option>
+					<option value ="30">30</option>
+                    <option value ="31">31</option>
+                    </select>
+                    일
+                    </td>
+				</tr><!-- 여덟번째 줄 끝-->
+                <tr><!-- 여덟번째 줄 시작-->
+					<td>관심분야:</td>
+					<td>
+                    <input type="checkbox" name="chk_info" value="컴퓨터">컴퓨터</input>
+					<input type="checkbox" name="chk_info" value="인터넷">인터넷</input>
+					<input type="checkbox" name="chk_info" value="여행">여행</input>
+                    <input type="checkbox" name="chk_info" value="영화감상">영화감상</input>
+					<input type="checkbox" name="chk_info" value="음악감상">음악감상</input>
+                    </td>
+				</tr><!-- 여덟번째 줄 끝-->
+                <tr><!-- 여덟번째 줄 시작-->
+					<td>자기소개:</td>
+					<td>
+                    <textarea name="myst" cols="60" rows="13"></textarea>
+                    </td>
+				</tr><!-- 여덟번째 줄 끝-->
+
+	</table>
+                <center>
+                <button type="button" onclick="validate()">회원가입</button>
+                <input type='reset' name="btn2" value="다시입력">
+                </center>
+                </form>
+</body>
+</html>

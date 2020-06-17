@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="RECRU.do"/>
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<list key="findhistory">
+			<item value="RECRU.do"/>
+			<item value=".do"/>
+			<item value="인턴"/>
+			<item value="featured"/>
+			<item value="뉴스"/>
+			<item value="NEWSWrite.do"/>
+			<item value="&lt;!-- Nav Item - Alerts --&gt;"/>
+			<item value="nav-item dropdown no-arrow mx-1"/>
+			<item value="ANEWSInput"/>
+			<item value="제목"/>
+			<item value="Drama news"/>
+			<item value="buttons0.1.jsp"/>
+			<item value="파일명"/>
+			<item value="글쓰기"/>
+			<item value="NewsWrite"/>
+		</list>
+		<list key="replacehistory">
+			<item value=""/>
+			<item value="../newsroom/Releases.do"/>
+			<item value="TotalRecru.do"/>
+			<item value="Portfolio.do"/>
+			<item value="PortfolioOn.do"/>
+			<item value=".jsp"/>
+			<item value="ViewerListAction.do"/>
+			<item value="../viewercomments/Comment.do"/>
+			<item value="viewercomments/Comment.do"/>
+			<item value="Comment.do"/>
+			<item value="dragonproject/view/User/newsroom/news"/>
+			<item value="dragonproject/view/User/newsroom/news/"/>
+			<item value="&gt;login"/>
+			<item value="../../../../홈페이지프로젝트/startbootstrap-sb-admin-2-gh-pages/login.html"/>
+			<item value="&gt;login&lt;"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="275"/>
+		<item key="DIALOG_Y_ORIGIN" value="168"/>
+		<item key="DIALOG_WIDTH" value="340"/>
+		<item key="DIALOG_HEIGHT" value="487"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+	</section>
+</section>

@@ -1,0 +1,32 @@
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+
+      var date = new Date();
+      var starttime = date.getSeconds();
+      var second1 = 0;    
+//정수를 1초마다 증가
+      function showClock1() {
+        var divClock = document.getElementById("divclock");
+        second1 += 1;
+        var msg = "접속 시간 : " + second1 + "초";
+
+        divClock.innerText = msg;
+        setTimeout(showClock1, 1000);
+      }
+
+    </script>
+  </head>
+
+  <body onload="showClock1()">
+
+    <div id="divclock">
+
+    </div>
+
+  </body>
+
+</html>

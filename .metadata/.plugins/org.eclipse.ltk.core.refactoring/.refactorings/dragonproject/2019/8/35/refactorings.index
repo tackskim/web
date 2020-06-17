@@ -1,0 +1,64 @@
+1566725504097	Delete element
+1566729978370	Delete element
+1566730093365	Delete element
+1566732096430	Delete element
+1566748376421	Copy file
+1566749199259	Delete element
+1566751713826	Delete element
+1566751790587	Rename resource 'login.html'
+1566799297129	Rename resource 'css'
+1566799569810	Rename resource 'kr'
+1566799601730	Rename resource 'js'
+1566799972907	Rename resource 'ir'
+1566799992692	Rename resource 'pr'
+1566800358106	Rename resource 'viewjs'
+1566800364168	Rename resource 'adminjs'
+1566800604347	Rename resource 'admincss'
+1566800609585	Rename resource 'viewcss'
+1566800614382	Rename resource 'USER'
+1566801972304	Move 'index.jsp' to 'download'
+1566801977585	Move 'index.jsp' to 'about'
+1566801983825	Delete element
+1566809189534	Delete elements
+1566870149551	Move 'commons-dbcp2-2.7.0.jar' to 'lib'
+1566870171081	Copy file
+1566881759290	Delete elements
+1566881875307	Delete element
+1566881978227	Delete element
+1566888219090	Delete element
+1566888230195	Delete element
+1566888234736	Delete element
+1566888248934	Delete elements
+1566889003232	Rename type 'BoardDAO'
+1566889010470	Rename type 'BoardBean'
+1566889045551	Move compilation unit
+1566889068975	Move compilation unit
+1566889076867	Delete element
+1566889107843	Move compilation units
+1566889112104	Delete element
+1566894086842	Rename type 'BoardFrontController'
+1566894110591	Rename type 'BoardListAction'
+1566894324821	Rename type 'ViewCommentDao'
+1566894331359	Rename type 'ViewCommentDto'
+1566901974947	Rename type 'ViewCommentAction'
+1566901988945	Rename type 'ViewCommentAction1'
+1566902020714	Rename compilation unit 'ViewCommentAdd.java'
+1566902025993	Rename compilation unit 'ViewCommentAdd1.java'
+1566906639202	Delete element
+1566906783540	Delete element
+1566919656864	Rename type 'NoticeAddaction'
+1566924299283	Rename type 'CommentSelect'
+1566924317749	Delete element
+1566924631723	Rename type 'Commentlist'
+1566924972984	Rename type 'ComComand'
+1566925000986	Rename type 'ComlistComand'
+1566925201933	Delete element
+1566925275412	Rename type 'ComaddCommand'
+1566925282655	Rename type 'ComlistCommand'
+1566925289156	Rename type 'ViewCommentAdd'
+1566925293952	Rename type 'ViewlistCommand'
+1566952114609	Rename type 'ViewerListAction'
+1566981257671	Copy file
+1567017126097	Delete element
+1567060719446	Delete element
+1567060893723	Delete element
